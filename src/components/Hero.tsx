@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero: React.FC = () => {
   return (
@@ -28,10 +29,12 @@ const Hero: React.FC = () => {
             From grooming to health and daycare — we've got your pet covered.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button className="bg-paworange hover:bg-paworange-dark text-white px-8 py-6 text-lg rounded-lg">
-              Book an Appointment
-              <ChevronRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link to="/appointment">
+              <Button className="bg-paworange hover:bg-paworange-dark text-white px-8 py-6 text-lg rounded-lg">
+                Book an Appointment
+                <ChevronRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
             <Button variant="outline" className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-white/30 px-8 py-6 text-lg rounded-lg">
               Explore Services
             </Button>
